@@ -1,0 +1,6 @@
+{
+  "appTitle": "sudoku_solver",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
