@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:sudoku_solver/src/ui/home_screen.dart';
+import 'package:sudoku_solver/src/constants/routes.dart';
+import 'package:sudoku_solver/src/ui/screens/home_screen.dart';
+import 'package:sudoku_solver/src/ui/screens/solver_screen.dart';
 
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
@@ -40,8 +42,10 @@ class MyApp extends StatelessWidget {
               settings: routeSettings,
               builder: (BuildContext context) {
                 switch (routeSettings.name) {
-                  case HomeScreen.routeName:
+                  case Routes.homeScreen:
                     return const HomeScreen();
+                  case Routes.solverScreen:
+                    return const SolverScreen();
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
                   default:
